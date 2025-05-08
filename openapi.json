@@ -1,9 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Postman Mock API",
-    "version": "1.0.0",
-    "description": "A simple mock API for testing Scribe REST connection"
+    "title": "Mock API",
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -13,24 +12,50 @@
   "paths": {
     "/users": {
       "get": {
-        "summary": "Get Users",
+        "summary": "Get list of users",
         "responses": {
           "200": {
-            "description": "List of users",
-            "content": {
-              "application/json": {
-                "example": [
-                  {
-                    "id": 1,
-                    "name": "John Doe"
-                  },
-                  {
-                    "id": 2,
-                    "name": "Jane Smith"
-                  }
-                ]
+            "description": "Users returned"
+          }
+        }
+      }
+    },
+    "/array": {
+      "get": {
+        "summary": "Get array data",
+        "responses": {
+          "200": {
+            "description": "Array returned"
+          }
+        }
+      }
+    },
+    "/array1": {
+      "get": {
+        "summary": "Get array1 data",
+        "responses": {
+          "200": {
+            "description": "Array1 returned"
+          }
+        }
+      }
+    },
+    "/userp": {
+      "post": {
+        "summary": "Post userp data",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "name": "John"
               }
             }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Userp created"
           }
         }
       }
