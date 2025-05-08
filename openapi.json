@@ -1,0 +1,39 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Postman Mock API",
+    "version": "1.0.0",
+    "description": "A simple mock API for testing Scribe REST connection"
+  },
+  "servers": [
+    {
+      "url": "https://68060b96-652e-4997-8387-55d1c117073b.mock.pstmn.io"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get Users",
+        "responses": {
+          "200": {
+            "description": "List of users",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "name": "John Doe"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Jane Smith"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
