@@ -53,11 +53,40 @@
             }
           }
         },
-        "responses": {
-          "201": {
-            "description": "Userp created"
+        "get": {
+  "operationId": "getSomething",
+  "summary": "Fetch something",
+  "responses": {
+    "200": {
+      "description": "Success"
+    }
+  }
+},
+        "post": {
+  "operationId": "createSomething",
+  "summary": "Create something",
+  "requestBody": {
+    "required": true,
+    "content": {
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
           }
         }
+      }
+    }
+  },
+  "responses": {
+    "201": {
+      "description": "Created"
+    }
+  }
+}
+
       }
     }
   }
